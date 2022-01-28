@@ -1,0 +1,322 @@
+<html>
+    <head>
+        <title>CHRIST UNIVERSITY</title>
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <style>
+            h1 {
+                text-align: center;
+            }
+            .sec {
+                width: 100vw;
+                height: 40vh;
+                background-color: #EF5354;
+                font-size: 50px;
+                color: white;
+                text-align: center;
+                margin: 10px 5px;
+            }
+            .one,
+            .three {
+                background-color: #E03B8B;
+            }
+            .link {
+                border-radius: 25px;
+                width: 10vw;
+                height: 40vh;
+                background-color: rgb(208, 233, 175);
+                font-size: x-large;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                text-align: center;
+                margin: 10px 5px;
+                display: flex;
+                color: black;
+            
+                flex-direction: column;
+                justify-content: space-around;
+                place-items: center;
+            }
+            .main {
+                display: grid;
+                grid-template-columns: 200px auto;
+            }
+            .marq {
+                background-color: black;
+                color: white;
+                font-size: larger;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .link a{
+                list-style: none;
+                text-decoration: none;
+                color: rgb(214, 6, 6)    ;
+                font-style: italic;
+            }
+            .link a:hover{
+                color: orange;
+                transition: 3s;
+            }
+            .link:hover{
+                background-color: black;
+                color: white;
+            }
+            .form-control {
+                width: 100%;
+                background: #fff;
+                padding-bottom: 8px;
+                border-radius: 4px;
+                box-shadow: none;
+                font-size: 14px;
+                border-color: #5fcf80;
+                height: 44px;
+                padding: 10px 12px;
+            }
+            .form-group {
+                padding-bottom: 8px;
+                border-radius: 4px;
+                box-shadow: none;
+                font-size: 14px;
+                border-color: #5fcf80;
+                height: 44px;
+                padding: 10px 12px;
+            }
+
+        .form-button[type=submit] {
+                background: #5fcf80;
+                border: 0;
+                padding: 10px 35px;
+                color: #fff;
+                transition: 0.4s;
+                border-radius: 50px;
+            }
+         .form-button[type=reset] {
+                background: #5fcf80;
+                border: 0;
+                padding: 10px 35px;
+                color: #fff;
+                transition: 0.4s;
+                border-radius: 50px;
+            }
+            .php-email-form button[type=submit]:hover {
+                background: #3ac162;
+            }
+
+        </style>
+    <script>
+                function test(event)
+            {
+                let code=event.which;
+                if(code>47&&code<58)
+                return false;
+                else
+                return true;
+            }
+        function ValidateEmail() {
+            var validRegex = /^([a-zA-Z0-9]{8,20}@(christuniversity.in))$/;
+            if (document.form1.email.value.match(validRegex)) {
+                alert("Valid email address!");
+                document.form1.email.focus();
+                return true;
+                } else {
+                alert("Invalid email address!");
+                document.form1.email.focus();
+                return false;
+                }
+            }
+        function ValidateNum() {
+            var validnum = /^(?:(?:\+|0{0,2})91(\s*|[\-])?|[0]?)?([6789]\d{2}([ -]?)\d{3}([ -]?)\d{4})$/;
+            if (document.form1.number.value.match(validnum)){
+            alert("Valid number");
+            document.form1.number.focus();
+            return true;
+            } else {
+            alert("Invalid number");
+            document.form1.number.focus();
+            return false;
+            }
+        }
+        function ValidateName() {
+            var validName = /(^[A-Za-z]{3,16})([ ]{0,1})([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})/;
+            if (document.form1.name.value.match(validName)) {
+                alert("Valid Name!");
+                document.form1.name.focus();
+                return true;
+                } else {
+                alert("Invalid Name!");
+                document.form1.name.focus();
+                return false;
+                }
+            }
+        function ValidatePass() {
+            var validPass = /(^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,})/;
+            if (document.form1.pass1.value.match(validPass)) {
+                alert("Valid Password!");
+                document.form1.pass1.focus();
+                return true;
+                } else {
+                alert("Invalid Password!");
+                document.form1.pass1.focus();
+                return false;
+                }
+            }
+        function matchPassword() {  
+            var pw1 = document.getElementById("pass1").value;  
+            var pw2 = document.getElementById("pass2").value;  
+            if(pw1 != pw2)  
+            {   
+            alert("Passwords did not match");  
+            } else {  
+            alert("Password created successfully");  
+            }  
+        }  
+        
+        function buttonState(){
+            if(ValidateEmail()  && ValidateName() && ValidateNum() && ValidatePass() && matchPassword() )
+            {
+                return true
+            }
+            else
+            {
+                return false
+            }
+        }
+    </script>
+    </head>
+    <body>
+        <div><center><img src = "christ-logo1.png" height="180px" width="500px"></center></div>
+        <div class="main">
+            <div class="link">
+                <a href="home.html" >Home</a><br>
+                <a href="about.html" >About</a><br>
+                <a href="teacher.html" >Teachers</a><br>
+                <a href="student.html" >Students</a><br>
+                <a href="feedback.html">Feedback</a>
+            </div>
+           
+            <section style="text-align: center;">
+            <div class="col-lg-8 mt-5 mt-lg-0">
+                <form name="form1" action="#">
+                    <div class="row">
+                      <div class="col-md-6 form-group">
+                        <input type="text" name="name" class="form-control"  id="name" placeholder="Your Name" onkeypress="return test(event)"  >
+                      </div>
+                      <div class="col-md-6 form-group mt-3 mt-md-0 form-group mt-3">
+                        <input type="email"  class="form-control" name="email" id="email" placeholder="Your Email"  >
+                        <span></span>
+                      </div>
+                      <div class="form-group mt-3">
+                          <input type="number" class="form-control"  name="number" id="number" placeholder="Your Mobile Number" maxlength="10"  >
+                          <span></span>
+                      </div>
+                    <div class="form-group mt-3">
+                      <input type="password" class="form-control" name="pass1" id="pass1" placeholder="Create Password"  >
+                    </div>
+                    <div class="form-group mt-3">
+                      <input type="password" class="form-control"  name="pass2" id="pass2" placeholder="Confirm Password" >
+                    </div>
+                    <div class="form-group mt-3">
+                      <textarea  name="address" id="add" class="form-control" rows="5" placeholder="Address" ></textarea>
+                    </div>
+                    <div class="form-group mt-3">
+                        <textarea  name="comment" id="comment" class="form-control" rows="5" placeholder="comment" ></textarea>
+                      </div>
+                    <div class="form-group mt-3">
+                        <div><p>What do you like most in campus?</p></div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Students
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Location
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Campus
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Atmosphere
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Dorms
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Sports
+                            </label>
+                          </div>
+                    </div>
+                    <div class="my-3"></div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="form-group mt-3">
+                        <div><p>How do you became interested in the university?</p></div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Friends
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              Television
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Internet
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Others
+                            </label>
+                          </div>
+                    </div>
+                    <div class="my-3"></div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="text-center">
+                        <button type="submit" onclick="buttonState()" class="form-button mt-3">
+                        Submit</button>
+                    </div>
+                    <div class="my-3"></div>
+                    <br>
+                    <br>
+                    <div class="text-center">
+                      <button type="reset"  class="form-button mt-3">
+                      Reset</button>
+                  </div>
+                  </form>
+            </div>
+        </section>
+        </div>
+        <div class="marq">
+            <marquee direction = "right"><b><u>Admission Open For MBA.</u></b></marquee>
+        </div>
+    </body>
+</html>
